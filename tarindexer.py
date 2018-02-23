@@ -55,6 +55,7 @@ def indextar(dbtarfile,indexfile):
     with tarfile.open(dbtarfile, 'r|') as db:
         if os.path.isfile(indexfile):
             print('file exists. exiting')
+            exit(0)
 
         with open(indexfile, 'w') as outfile:
             counter = 0
